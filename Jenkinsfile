@@ -22,7 +22,7 @@ pipeline{
             steps{
                 git branch: 'main',
                 credentialsId: 'github-token',
-                url: 'https://github.com/Aseemakram19/hotstar-kubernetes.git'
+                url: 'https://github.com/jitendar6486/hotstar-kubernetes.git'
             }
         }
 
@@ -87,9 +87,9 @@ pipeline{
 
                         sh 'docker build -t hotstar .'
 
-                        sh 'docker tag hotstar aseemakram19/hotstar:latest'
+                        sh 'docker tag hotstar sawjitendar/hotstar:latest'
 
-                        sh 'docker push aseemakram19/hotstar:latest'
+                        sh 'docker push sawjitendar/hotstar:latest'
                     }
                 }
             }
@@ -97,7 +97,7 @@ pipeline{
 
         stage("TRIVY IMAGE SCAN"){
             steps{
-                sh 'trivy image aseemakram19/hotstar:latest > trivyimage.txt'
+                sh 'trivy image sawjitendar/hotstar:latest > trivyimage.txt'
             }
         }
 
@@ -105,7 +105,7 @@ pipeline{
             steps{
                 sh '''
                 docker rm -f hotstar || true
-                docker run -d --name hotstar -p 3000:3000 aseemakram19/hotstar:latest
+                docker run -d --name hotstar -p 3000:3000 sawjitendar/hotstar:latest
                 '''
             }
         }
@@ -142,11 +142,11 @@ pipeline{
                     </p>
                     """,
 
-                    to: 'mohdaseemakram19@gmail.com',
+                    to: 'sawjitendarkargalo@gmail.com',
 
-                    from: 'mohdaseemakram19@gmail.com',
+                    from: 'sawjitendarkargalo@gmail.com',
 
-                    replyTo: 'mohdaseemakram19@gmail.com',
+                    replyTo: 'sawjitendarkargalo@gmail.com',
 
                     mimeType: 'text/html',
 
