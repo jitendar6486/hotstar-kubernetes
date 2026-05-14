@@ -1,61 +1,439 @@
-## Hi there! this my new project
-**Welcome to the Hotstart App Deployment project! This project demonstrates how to deploy a Hotstar Next.js application on Kubernetes cluster using modern DevOps tools, practices and following a DevSecOps approach.**
+# Disney+ Hotstar Clone – DevSecOps CI/CD Pipeline
 
-## 🛠️ **Tools & Services Used**
+## Project Overview
 
-| **Category**       | **Tools**                                                                                                                                                                                                 |
-|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Version Control** | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)                                                                                                       |
-| **CI/CD**           | ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)                                                                                                    |
-| **Code Quality**    | ![SonarQube](https://img.shields.io/badge/SonarQube-4E9BCD?style=flat-square&logo=sonarqube&logoColor=white)                                                                                              |
-| **Containerization**| ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)                                                                                                       |
-| **Orchestration**   | ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)                                                                                          |
-| **Monitoring**      | ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white) |
-| **Security**        | ![OWASP](https://img.shields.io/badge/OWASP-000000?style=flat-square&logo=owasp&logoColor=white) ![Trivy](https://img.shields.io/badge/Trivy-00979D?style=flat-square&logo=trivy&logoColor=white)         |
-| **IAC**             | ![Terraform](https://img.shields.io/badge/Terraform-623CE4?style=flat-square&logo=terraform&logoColor=white)
----
-## 🚦 **Project Stages**
+This project demonstrates a complete **DevSecOps CI/CD pipeline** for deploying a Disney+ Hotstar Clone application using modern DevOps and Cloud technologies.
 
-### **Phase 1: Deployment to Docker Container**
-- Containerize the application using Docker.
-- Build and push Docker images to a container registry.
-- Run the application in a Docker container.
+The pipeline automates:
 
-### **Phase 2: Deployment to EKS Cluster with Monitoring**
-- Deploy the application to an **Amazon EKS (Elastic Kubernetes Service)** cluster.
-- Set up **Prometheus** and **Grafana** for monitoring and visualization.
-- Implement **Trivy** for vulnerability scanning and **OWASP** for security best practices.
+* Source code management
+* Continuous Integration
+* Security scanning
+* Docker image build
+* Kubernetes deployment
+* Monitoring and alerting
+* Infrastructure provisioning
+
+The project is designed to showcase real-world DevOps practices for production-grade deployments.
 
 ---
 
-## 📂 **Code Repository**
-Explore the code and contribute to the project:  
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Aseemakram19/hotstar-kubernetes.git)
+# Architecture Diagram
+
+![DevSecOps Architecture](architecture.png)
+
+> Add your architecture image file to the GitHub repository with the name `architecture.png` so it displays automatically in the README.
+
+## Workflow
+
+1. Developer pushes code to GitHub
+2. Jenkins pipeline gets triggered
+3. SonarQube performs code quality analysis
+4. NPM installs dependencies
+5. Trivy scans filesystem vulnerabilities
+6. Docker image is built
+7. Trivy scans Docker image
+8. Docker image is pushed to registry
+9. Application is deployed to Kubernetes
+10. Cloudflare + Load Balancer expose the application
+11. Prometheus and Grafana monitor the infrastructure
+12. Email notifications are sent through Gmail
 
 ---
-## 📹 **Project Video**
-Watch the step-by-step deployment process:  
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/VPJ4gesLXOc)
+
+# Tech Stack
+
+## DevOps Tools
+
+* GitHub
+* Jenkins
+* SonarQube
+* Docker
+* Kubernetes
+* Terraform
+* Trivy
+* Prometheus
+* Grafana
+* Cloudflare
+* Jira
+
+## Cloud & Infrastructure
+
+* AWS EC2
+* AWS Load Balancer
+* Kubernetes Cluster
+* Docker Registry
+
+## Application Stack
+
+* Node.js
+* React.js
+* NPM
 
 ---
-## 🚀 **Other DevOps Projects**
 
-| **Project**                                | **Video Link**                                                                                   |
-|--------------------------------------------|--------------------------------------------------------------------------------------------------|
-| **JAVA APPLICATION DEPLOYMENT Project**                     | [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=R98DHKqAEos) |
-| **Deployment of BINGO in Kubernetes Cluster Monitoring**  | [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/j6YxADVF0W8) |
-| **Real-time CICD pipeline Website Jenkins CI CD**         | [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/xGWx_cXb9DE) |
-| **DevOps Project , Application deployment on App server via Terraform, Jenkins, SonarQube**                     | [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/xGWx_cXb9DE) |
-| **Realtime NODE.js App deployment with PM2 , Shell script, Jenkins, SonarQube ,Github ,Domain SSL cert**                     | [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/MFtUCfQ1RX0) |
+# Features
 
-## 🤝 **Connect with Me**
+* Complete CI/CD Automation
+* Infrastructure as Code using Terraform
+* Docker Containerization
+* Kubernetes Deployment
+* Security Scanning with Trivy
+* Code Quality Analysis using SonarQube
+* Monitoring with Prometheus & Grafana
+* SSL and DNS via Cloudflare
+* Jenkins Email Notifications
+* Scalable Production Deployment
 
-Let's connect and discuss DevSecOps  
+---
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammed-aseem-akram/)  
+# Project Structure
 
+```bash
+.
+├── Jenkinsfile
+├── terraform/
+├── kubernetes/
+├── docker/
+├── src/
+├── package.json
+├── deployment.yaml
+├── service.yaml
+└── README.md
+```
 
+---
 
+# Prerequisites
 
+Before starting, install the following:
 
+* Git
+* Docker
+* Kubernetes Cluster
+* Jenkins
+* Terraform
+* Node.js
+* SonarQube
+* Trivy
+* AWS CLI
+* kubectl
+
+---
+
+# Step 1 – Clone Repository
+
+```bash
+git clone https://github.com/jitendar6486/hotstar-clone-devsecops.git
+cd hotstar-clone-devsecops
+```
+
+---
+
+# Step 2 – Configure Jenkins
+
+## Install Required Plugins
+
+* Docker Pipeline
+* Kubernetes
+* SonarQube Scanner
+* Email Extension Plugin
+* Pipeline Plugin
+* Git Plugin
+
+## Configure Tools
+
+Go to:
+
+```text
+Manage Jenkins → Global Tool Configuration
+```
+
+Configure:
+
+* JDK
+* NodeJS
+* SonarQube Scanner
+* Docker
+
+---
+
+# Step 3 – SonarQube Setup
+
+## Run SonarQube Container
+
+```bash
+docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
+```
+
+Access:
+
+```text
+http://<server-ip>:9000
+```
+
+Generate token and add it to Jenkins credentials.
+
+---
+
+# Step 4 – Install Trivy
+
+```bash
+sudo apt-get install wget apt-transport-https gnupg lsb-release -y
+wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+sudo apt-get update
+sudo apt-get install trivy -y
+```
+
+---
+
+# Step 5 – Docker Build
+
+## Build Docker Image
+
+```bash
+docker build -t hotstar-clone .
+```
+
+## Run Container
+
+```bash
+docker run -d -p 3000:3000 hotstar-clone
+```
+
+---
+
+# Step 6 – Trivy Scan
+
+## Filesystem Scan
+
+```bash
+trivy fs .
+```
+
+## Docker Image Scan
+
+```bash
+trivy image hotstar-clone
+```
+
+---
+
+# Step 7 – Push Docker Image
+
+```bash
+docker tag hotstar-clone your-dockerhub-username/hotstar-clone:latest
+docker push your-dockerhub-username/hotstar-clone:latest
+```
+
+---
+
+# Step 8 – Kubernetes Deployment
+
+## Apply Deployment
+
+```bash
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+```
+
+## Verify Pods
+
+```bash
+kubectl get pods
+kubectl get svc
+```
+
+---
+
+# Step 9 – Terraform Infrastructure
+
+## Initialize Terraform
+
+```bash
+terraform init
+```
+
+## Validate
+
+```bash
+terraform validate
+```
+
+## Plan
+
+```bash
+terraform plan
+```
+
+## Apply
+
+```bash
+terraform apply -auto-approve
+```
+
+---
+
+# Step 10 – Monitoring Setup
+
+## Install Prometheus
+
+```bash
+kubectl apply -f prometheus.yaml
+```
+
+## Install Grafana
+
+```bash
+kubectl apply -f grafana.yaml
+```
+
+Access Grafana dashboard using:
+
+```text
+http://<server-ip>:3000
+```
+
+---
+
+# Jenkins Pipeline Example
+
+```groovy
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Git Checkout') {
+            steps {
+                git 'https://github.com/your-username/repository.git'
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                sh 'sonar-scanner'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('Trivy File Scan') {
+            steps {
+                sh 'trivy fs .'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t hotstar-clone .'
+            }
+        }
+
+        stage('Trivy Image Scan') {
+            steps {
+                sh 'trivy image hotstar-clone'
+            }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                sh 'docker push your-image-name'
+            }
+        }
+
+        stage('Deploy to Kubernetes') {
+            steps {
+                sh 'kubectl apply -f deployment.yaml'
+            }
+        }
+    }
+}
+```
+
+---
+
+# Security Best Practices
+
+* Use Jenkins Credentials Manager
+* Enable Kubernetes RBAC
+* Scan images regularly using Trivy
+* Store secrets securely
+* Enable HTTPS using SSL
+* Restrict inbound security group rules
+
+---
+
+# Monitoring & Alerts
+
+## Prometheus
+
+Used for:
+
+* Cluster monitoring
+* Node metrics
+* Pod metrics
+* Application monitoring
+
+## Grafana
+
+Used for:
+
+* Dashboards
+* Real-time visualization
+* Alerts
+* Performance monitoring
+
+---
+
+# Future Enhancements
+
+* Add ArgoCD GitOps deployment
+* Integrate Slack notifications
+* Add Helm charts
+* Implement Blue-Green Deployment
+* Add Auto Scaling
+* Integrate HashiCorp Vault
+
+---
+
+# Output
+
+Application URL:
+
+```text
+https://app.cloudaseem.com
+```
+
+---
+
+# Author
+
+## Jitendar Saw
+
+### DevOps Engineer
+
+Skills:
+
+* AWS
+* Docker
+* Kubernetes
+* Jenkins
+* Terraform
+* Linux
+* CI/CD
+* Monitoring
+
+GitHub:
+
+```text
+https://github.com/jitendar6486
+```
+
+---
 
