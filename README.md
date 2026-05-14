@@ -104,8 +104,8 @@ Before starting, install the following:
 # Step 1 – Clone Repository
 
 ```bash
-git clone https://github.com/jitendar6486/hotstar-clone-devsecops.git
-cd hotstar-clone-devsecops
+git clone https://github.com/jitendar6486/hotstar-kubernetes.git
+cd hotstar-kubernetes
 ```
 
 ---
