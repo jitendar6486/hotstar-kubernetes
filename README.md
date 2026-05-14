@@ -1,11 +1,8 @@
 # Disney+ Hotstar Clone – DevSecOps CI/CD Pipeline
 
 ## Project Overview
-
 This project demonstrates a complete **DevSecOps CI/CD pipeline** for deploying a Disney+ Hotstar Clone application using modern DevOps and Cloud technologies.
-
 The pipeline automates:
-
 * Source code management
 * Continuous Integration
 * Security scanning
@@ -13,11 +10,7 @@ The pipeline automates:
 * Kubernetes deployment
 * Monitoring and alerting
 * Infrastructure provisioning
-
-The project is designed to showcase real-world DevOps practices for production-grade deployments.
-
 ---
-
 # Architecture Diagram
 <img width="1619" height="971" alt="project1" src="https://github.com/user-attachments/assets/f5c8a865-306f-432c-890d-97626432d40f" />
 
@@ -37,9 +30,6 @@ The project is designed to showcase real-world DevOps practices for production-g
 12. Email notifications are sent through Gmail
 
 ---
-
-
-
 ## DevOps Tools
 
 * GitHub
@@ -53,9 +43,7 @@ The project is designed to showcase real-world DevOps practices for production-g
 * Grafana
 * Cloudflare
 * Jira
-
 ## Cloud & Infrastructure
-
 * AWS EC2
 * AWS Load Balancer
 * Kubernetes Cluster
@@ -68,7 +56,6 @@ The project is designed to showcase real-world DevOps practices for production-g
 * NPM
 
 ---
-
 # Features
 
 * Complete CI/CD Automation
@@ -83,7 +70,6 @@ The project is designed to showcase real-world DevOps practices for production-g
 * Scalable Production Deployment
 
 ---
-
 # Project Structure
 
 ```bash
@@ -100,11 +86,9 @@ The project is designed to showcase real-world DevOps practices for production-g
 ```
 
 ---
-
 # Prerequisites
 
 Before starting, install the following:
-
 * Git
 * Docker
 * Kubernetes Cluster
@@ -117,7 +101,6 @@ Before starting, install the following:
 * kubectl
 
 ---
-
 # Step 1 – Clone Repository
 
 ```bash
@@ -126,7 +109,6 @@ cd hotstar-clone-devsecops
 ```
 
 ---
-
 # Step 2 – Configure Jenkins
 
 ## Install Required Plugins
@@ -388,14 +370,5 @@ Used for:
 
 ---
 
-# Future Enhancements
 
-* Add ArgoCD GitOps deployment
-* Integrate Slack notifications
-* Add Helm charts
-* Implement Blue-Green Deployment
-* Add Auto Scaling
-* Integrate HashiCorp Vault
-
----
 
