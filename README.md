@@ -19,10 +19,7 @@ The project is designed to showcase real-world DevOps practices for production-g
 ---
 
 # Architecture Diagram
-
-![DevSecOps Architecture](architecture.png)
-
-> Add your architecture image file to the GitHub repository with the name `architecture.png` so it displays automatically in the README.
+<img width="1619" height="971" alt="project1" src="https://github.com/user-attachments/assets/f5c8a865-306f-432c-890d-97626432d40f" />
 
 ## Workflow
 
@@ -399,41 +396,6 @@ Used for:
 * Implement Blue-Green Deployment
 * Add Auto Scaling
 * Integrate HashiCorp Vault
-
----
-
-# Output
-
-Application URL:
-
-```text
-https://app.cloudaseem.com
-```
-
----
-
-# Author
-
-## Jitendar Saw
-
-### DevOps Engineer
-
-Skills:
-
-* AWS
-* Docker
-* Kubernetes
-* Jenkins
-* Terraform
-* Linux
-* CI/CD
-* Monitoring
-
-GitHub:
-
-```text
-https://github.com/jitendar6486
-```
 
 ---
 
