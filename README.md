@@ -38,7 +38,7 @@ The project is designed to showcase real-world DevOps practices for production-g
 
 ---
 
-# Tech Stack
+
 
 ## DevOps Tools
 
